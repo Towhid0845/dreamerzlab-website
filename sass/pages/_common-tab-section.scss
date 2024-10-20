@@ -1,0 +1,187 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.common-tab-section {
+  padding: 80px 0 80px 0;
+  background: linear-gradient(217deg, #141C27 50%, #000000);
+
+  .common-title {
+    padding-bottom: 136px;
+  }
+
+  .common-tab-title {
+    padding-bottom: 100px;
+
+    h3 {
+      @include font(42px, 700);
+      color: $white;
+      text-transform: uppercase;
+      display: inline-block;
+      position: relative;
+      padding-top: 8px;
+
+      &::before {
+        width: 90%;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $white;
+        border-radius: 5px;
+        content: "";
+      }
+    }
+  }
+
+  .button {
+    padding-top: 57px;
+
+    a {
+      @include font(18px, 500);
+      color: $white;
+      text-transform: uppercase;
+      padding: 9px 42px;
+      border-radius: 5px;
+      border: 1px solid $white;
+      transition: all linear .2s;
+
+      &:hover {
+        background-color: #276FFF;
+        border-color: #276FFF;
+      }
+    }
+  }
+}
+
+
+.common-tab {
+  .menu {
+    padding-bottom: 90px;
+
+    .filters-select {
+      width: 160px;
+      margin: 0 auto;
+      @include font(18px, 700);
+      text-transform: capitalize;
+      color: $white;
+      background-color: #131B26;
+      border: transparent;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    .form-select {
+      background-image: url(../images/dn.png);
+
+    }
+
+    ul {
+      li {
+        button {
+          background-color: transparent;
+          border: 0;
+          @include font(24px, 700);
+          color: $white;
+          text-transform: capitalize;
+          margin: 0 45px;
+          position: relative;
+          padding-bottom: 10px;
+
+          &::before {
+            width: 60px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: transparent;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            content: "";
+          }
+        }
+
+        button.active {
+          &::before {
+            background: linear-gradient(to right, #5474DA, #276FFF);
+          }
+        }
+      }
+    }
+  }
+
+  .menu-body {
+    .image{
+      transition: all linear .2s;
+    }
+    .text {
+      padding-top: 40px;
+
+      h4 {
+        @include font(28px, 600);
+        color: $white;
+        text-transform: uppercase;
+        line-height: 60px;
+        position: relative;
+        transition: all linear .2s;
+
+        &::before {
+          width: 100px;
+          height: 2px;
+          background-color: $white;
+          position: absolute;
+          top: -10px;
+          left: 0;
+          content: "";
+          transition: all linear .2s
+        }
+      }
+
+      p {
+        @include font(16px, 400);
+        color: $white;
+        text-transform: uppercase;
+        line-height: 60px;
+        transition: all linear .2s;
+      }
+    }
+
+    .menu-item {
+      margin-bottom: 40px;
+
+      .image {
+        height: 365px;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    a {
+      &:hover {
+        .text {
+          h4 {
+            color: $primary;
+            &::before{
+              background-color: $primary;
+            }
+          }
+          p{
+            color: $primary;
+          }
+        }
+        .image{
+          box-shadow: 0px 3px 20px 2px rgba(0, 81, 243, 0.4);
+        }
+      }
+    }
+  }
+}

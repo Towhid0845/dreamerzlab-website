@@ -1,0 +1,220 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.plyr {
+  height: 600px;
+  overflow: hidden;
+}
+
+.product-details {
+  background: linear-gradient(217deg, #141C27 50%, #000000);
+  padding: 80px 0 160px 0;
+
+  .common-title {
+    padding-bottom: 60px;
+  }
+
+
+  .about-lab {
+    padding-top: 89px;
+    padding-bottom: 0;
+
+    .text {
+      position: relative;
+      z-index: 99;
+
+      p {
+        @include font(24px, 400);
+        color: #9C9EA2;
+        line-height: 40px;
+        text-align: justify;
+      }
+    }
+
+    .image {
+      position: relative;
+      z-index: 9;
+      width: 416px;
+      height: 360px;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url(../images/services-inner-shape.png);
+        width: 700px;
+        height: 700px;
+        content: "";
+        z-index: -999;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .des {
+      padding-top: 14px;
+
+      p {
+        @include font(24px, 400);
+        color: #9C9EA2;
+        line-height: 40px;
+        text-align: justify;
+      }
+    }
+
+  }
+
+  .features {
+    padding-top: 100px;
+
+    .common-title {
+      padding-bottom: 40px;
+
+      p {
+        @include font(24px, 500);
+        color: $white;
+        padding-top: 6px;
+      }
+    }
+
+    .features-info {
+      .title {
+        padding-bottom: 50px;
+
+        h4 {
+          @include font(24px, 700);
+          color: $white;
+          display: inline-block;
+          position: relative;
+          padding-top: 8px;
+
+          &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 33px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: #687B86;
+            content: "";
+          }
+        }
+      }
+
+      .info-main {
+        ul.nav {
+          li {
+            button {
+              @include font(24px, 700);
+              color: #9C9EA2;
+              margin-right: 40px;
+              padding: 0;
+            }
+          }
+        }
+
+        .nav-pills .nav-link.active {
+          background-color: transparent;
+          color: $white;
+        }
+
+        .tab-content {
+          padding-top: 20px;
+
+          ul {
+            li {
+              padding-bottom: 20px;
+
+              i {
+                color: #27AE60;
+                font-size: 32px;
+                padding-right: 20px
+              }
+
+              span {
+                @include font(20px, 500);
+                color: $white;
+              }
+            }
+
+            li:last-child {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .features-image {
+      width: 520px;
+      height: 460px;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+  }
+
+  .download-app {
+    padding-top: 60px;
+
+    .title {
+      padding-bottom: 60px;
+
+      h4 {
+        @include font(24px, 700);
+        color: #F2994A;
+      }
+    }
+
+    .button {
+      a {
+        margin: 0 20px;
+      }
+    }
+  }
+
+  .tell-us-more {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .text {
+      h2 {
+        @include font(72px, 700);
+        color: #FECB86;
+        text-transform: uppercase;
+      }
+    }
+
+    .button {
+      padding-top: 70px;
+
+      a {
+        @include font(18px, 600);
+        color: #276FFF;
+        text-transform: uppercase;
+        border: 1px solid #276FFF;
+        border-radius: 5px;
+        padding: 9px 29px;
+        transition: all linear .2s;
+
+        &:hover {
+          background-color: #276FFF;
+          color: $white;
+        }
+      }
+    }
+  }
+
+}

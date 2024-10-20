@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, content=user-scalable=yes, initial-scale=1.0, maximum-scale=5, minimum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <title>DREAMERZLAB</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    ul,
+    ol {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin: 0;
+    }
+
+    table {
+      border-spacing: 0;
+      width: 100%;
+    }
+
+    td {
+      padding: 0;
+    }
+
+    img {
+      border: 0;
+    }
+
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+      padding-bottom: 60px;
+    }
+
+    .main {
+      background-color: #EAF0F3;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 600px;
+      border-spacing: 0;
+      font-family: 'Playfair Display', serif;
+      color: #434950;
+      padding: 25px;
+    }
+
+    .top-title {
+      font-size: 32px;
+      font-weight: 700;
+      height: 120px;
+    }
+
+    .blog-bg {
+      background-color: #131B26;
+      width: 100%;
+      border-radius: 10px;
+      padding: 41px 0;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .blog-item {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      background-color: #272F38;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .blog-image {
+      width: 100%;
+      height: 240px;
+    }
+
+    .blog-image img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .tag {
+      font-size: 14px;
+      font-weight: 500;
+      color: #D6D6D6;
+      padding: 3px 15px;
+      border-radius: 20px;
+      background-color: #737373
+    }
+
+    .blog-info {
+      padding: 26px 35px 35px;
+    }
+
+    .blog-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      font-family: 'Encode Sans', sans-serif;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .blog-details {
+      font-size: 16px;
+      font-weight: 400;
+      font-family: 'Encode Sans', sans-serif;
+      line-height: 28px;
+      color: #F6F6F6;
+    }
+
+    .read-more {
+      font-size: 16px;
+      font-weight: 500;
+      color: #276FFF;
+      font-family: 'Encode Sans', sans-serif;
+    }
+
+    .tui-moga {
+      margin-top: 24px;
+    }
+
+    .profile-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .blog-publisher-name {
+      font-size: 16px;
+      font-weight: 500;
+      color: #EDEDED;
+      display: inline-block;
+      border-bottom: 1px solid #B2B2B2;
+      padding-bottom: 4px;
+      font-family: 'Encode Sans', sans-serif;
+    }
+
+    .blog-date {
+      font-size: 10px;
+      font-weight: 300;
+      color: #B6B6B6;
+      font-family: 'Encode Sans', sans-serif;
+      padding-top: 6px;
+    }
+
+    .read-more-big-btn {
+      font-size: 16px;
+      font-weight: 500;
+      color: #ffffff;
+      background-color: #276FFF;
+      padding: 16px 60px;
+      border-radius: 4px;
+      margin: 40px 0;
+      font-family: 'Encode Sans', sans-serif;
+    }
+
+    .footer {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 560px;
+      box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.1);
+      padding: 20px 30px;
+    }
+
+    .social {
+      width: 50%;
+      vertical-align: top;
+    }
+
+    .social-title {
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Encode Sans', sans-serif;
+      margin-bottom: 64px;
+    }
+
+    .social-icon {
+      margin-right: 33px;
+      margin-bottom: 5px;
+    }
+
+    .contact-title {
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Encode Sans', sans-serif;
+    }
+
+    .contact {
+      width: 50%;
+      vertical-align: top;
+    }
+
+    .important-link {
+      font-size: 15px;
+      font-weight: 400;
+      color: #1F4DF0;
+      font-family: 'Encode Sans', sans-serif;
+      margin-top: 14px;
+    }
+
+    .extra-info {
+      font-size: 15px;
+      font-weight: 500;
+      color: #515759;
+      font-family: 'Encode Sans', sans-serif;
+      line-height: 20px;
+      margin-top: 14px;
+    }
+
+    .extra-info a {
+      color: #515759;
+    }
+
+    .unsubscribe {
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: underline;
+      color: #131B26;
+      font-family: 'Encode Sans', sans-serif;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <center class="wrapper">
+    <table class="main" width="100%">
+      <tr>
+        <td align="center">
+          <a href=""><img src="images/e-t-l-1.png" alt="Logo" width="163"></a>
+        </td>
+      </tr>
+      <tr>
+        <td class="top-title" align="center" style="text-align: center;">
+          New Blog published
+        </td>
+      </tr>
+      <tr>
+        <td class="blog-bg">
+          <table class="blog-item">
+            <tr>
+              <td class="blog-image">
+                <img src="images/e-t-1-g.png" alt="blog-image" width="100%">
+              </td>
+            </tr>
+            <tr>
+              <td class="blog-info">
+                <span class="tag">Article</span>
+                <h2 class="blog-title">Lobortis egestas odio pharetra enim ut</h2>
+                <p>
+                  <span class="blog-details">
+                    Fermentum aliquam turpis ultricies semper maecenas habitant gravida dictumst.
+                    Tellus congue est morbi nulla integer. Elementum, lorem quis in consequat amet....</span>
+                  <a href="" class="read-more">Read more</a>
+                </p>
+                <table class="tui-moga">
+                  <tr>
+                    <td style="width: 80px;">
+                      <img class="profile-img" src="images/user.png" alt="user">
+                    </td>
+                    <td>
+                      <h5 class="blog-publisher-name">Paul Lomino</h5>
+                      <h6 class="blog-date">March 16, 2022</h6>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <a href="" class="read-more-big-btn">Read more</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table class="footer">
+            <tr>
+              <td class="social" style="text-align: left !important;">
+                <h4 class="social-title">Follow Us.</h4>
+                <a href="" class="social-icon"><img src="images/f.png" alt=""></a>
+                <a href="" class="social-icon"><img src="images/t.png" alt=""></a>
+                <a href="" class="social-icon"><img src="images/l.png" alt=""></a>
+                <a href="" class="social-icon"><img src="images/y.png" alt=""></a>
+              </td>
+              <td class="contact" style="text-align: left !important;">
+                <h4 class="contact-title">Contact Us.</h4>
+                <a href="" class="important-link">hr@dreamerzlab.com</a>
+                <a href="" class="important-link">www.dreamerzlab.com</a>
+                <p class="extra-info"><a href="tel:+880 167511047">+880 1675110479</a></p>
+                <p class="extra-info">House no: 449 (4th floor), Road: 31, Mohakhali DOHS, Dhaka - 1212, Bangladesh
+                </p>
+                <a href="" class="unsubscribe">Unsubscribe</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </center>
+
+</body>
+
+</html>

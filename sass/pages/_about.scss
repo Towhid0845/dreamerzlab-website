@@ -1,0 +1,264 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.about-us {
+    padding: 146px 0;
+    padding-bottom: 80px;
+
+    .text {
+        .common-title {
+            padding-bottom: 60px;
+        }
+
+        p {
+            @include font(20px, 500);
+            color: #9C9EA2;
+            text-align: justify;
+            padding-bottom: 35px;
+        }
+
+        a {
+            margin-top: 40px;
+            @include font(18px, 400);
+            color: $white;
+            border: 1px solid $white;
+            border-radius: 5px;
+            text-transform: capitalize;
+            padding: 13px 50px;
+            transition: all linear .2s;
+
+            &:hover {
+                background-color: $primary;
+                border-color: $primary
+            }
+        }
+    }
+
+
+}
+
+// .plyr__control.plyr__control--overlaid {
+//   width: 142px !important;
+//   height: 142px;
+//   background-color: #1A242E !important;
+//   border-radius: 50%;
+//   text-align: center !important;
+//   line-height: 142px;
+//   color: #276FFF;
+//   font-size: 68px !important;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   svg{
+//     display: inline-block;
+//   }
+// }
+
+
+.plyr__control--overlaid {
+    /* background: #00b2ff; */
+    background: #1A242E;
+    border: 0;
+    border-radius: 100%;
+    color: #276FFF;
+    display: none;
+    left: 50%;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(3);
+    transition: .3s;
+    z-index: 2;
+}
+
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded="true"] {
+    background: #1A242E;
+    color: #276FFF;
+}
+
+.plyr__poster {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.mission-vision {
+    background: linear-gradient(-63deg, #000000, #141C27 50%);
+    padding: 100px 0 99px 0;
+
+    .plyr {
+        height: 490px;
+    }
+
+    .main {
+        padding-top: 123px;
+
+        .common-title {
+            padding-top: 64px;
+        }
+
+        .vision {
+            width: 496px;
+
+            p {
+                text-align: justify;
+            }
+        }
+
+        .mission {
+            width: 520px
+        }
+
+        p {
+            @include font(20px, 500);
+            color: $white;
+            line-height: 30px;
+            padding-top: 13px;
+            text-align: justify;
+        }
+    }
+}
+
+.team-part {
+    padding: 125px 0 89px 0;
+    background: linear-gradient(217deg, #141C27 50%, #000000);
+
+    .team-body {
+        background-color: #1A242E;
+        padding: 73px 75px 80px;
+
+        .image {
+            height: 404px;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center
+            }
+
+            ;
+        }
+
+        .team-head {
+            padding-bottom: 100px;
+
+            h3 {
+                @include font(42px, 700);
+                color: $white;
+                text-transform: uppercase;
+                display: inline-block;
+                border-top: 1px solid #276FFF;
+                border-bottom: 1px solid #276FFF;
+                padding: 5px 0;
+            }
+        }
+
+        .common-title {
+            padding-bottom: 70px;
+        }
+
+        .director {
+            .director-item {
+                margin-bottom: 24px;
+
+                .image {
+                    img {
+                        border-top-right-radius: 12px;
+                        border-top-left-radius: 12px;
+                    }
+                }
+
+                .text {
+                    background-color: #3C454A;
+                    padding: 24px 20px 20px 20px;
+                    border-bottom-right-radius: 12px;
+                    border-bottom-left-radius: 12px;
+
+                    h4 {
+                        @include font(24px, 700);
+                        color: $white;
+                        text-transform: uppercase;
+                        padding: 24px 0 8px 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    p {
+                        @include font(14px, 600);
+                        color: #9C9EA2;
+                        text-transform: uppercase;
+                        padding-bottom: 16px;
+                    }
+
+                    a {
+                        width: 34px;
+                        height: 34px;
+                        background-color: $white;
+                        text-align: center;
+                        line-height: 34px;
+                        border-radius: 50%;
+                        color: #3C454A;
+                        transition: all linear .2s;
+
+                        &:hover {
+                            background-color: $primary;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .the-team {
+            padding-top: 140px;
+
+            .team-item {
+                margin-bottom: 24px;
+
+                .image {
+                    img {
+                        border-top-right-radius: 12px;
+                        border-top-left-radius: 12px;
+                    }
+                }
+
+                .text {
+                    background-color: #3C454A;
+                    padding: 24px 20px 20px 20px;
+                    border-bottom-right-radius: 12px;
+                    border-bottom-left-radius: 12px;
+
+                    h4 {
+                        @include font(24px, 700);
+                        color: $white;
+                        text-transform: uppercase;
+                        padding: 0px 0 8px 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    p {
+                        @include font(14px, 600);
+                        color: #9C9EA2;
+                        text-transform: uppercase;
+                        padding-bottom: 16px;
+                    }
+
+                    a {
+                        width: 34px;
+                        height: 34px;
+                        background-color: $white;
+                        text-align: center;
+                        line-height: 34px;
+                        border-radius: 50%;
+                        color: #3C454A;
+                    }
+                }
+            }
+        }
+    }
+}

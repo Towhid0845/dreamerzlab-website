@@ -1,0 +1,43 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+
+.bread-crumb {
+    padding-top: 100px;
+    background-color: #131B26;
+    padding-bottom: 30px;
+
+    ul {
+        li {
+            margin-right: 12px;
+            display: inline-block;
+            text-transform: uppercase;
+            @include font(16px, 400);
+            color: rgba(255, 255, 255, 0.6);
+            position: relative;
+
+            a {
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                right: -10px;
+                content: "/";
+                color: rgba(255, 255, 255, 0.6);
+                ;
+            }
+        }
+
+        li:last-child {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+.bread-crumb.pt {
+    padding-top: 200px;
+}

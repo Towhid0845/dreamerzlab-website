@@ -1,0 +1,168 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.works {
+    background-color: #131B26;
+
+    .works-text {
+        width: 511px;
+        margin-left: auto;
+        margin-right: 125px;
+
+        .common-title {
+            padding-bottom: 61px
+        }
+
+        p {
+            @include font(24px, 500);
+            color: #9C9EA2;
+            text-align: justify;
+            line-height: 38px;
+        }
+
+        .common-btn {
+            padding-top: 80px;
+        }
+    }
+
+    .works-slider {
+        position: relative;
+        height: 800px;
+
+        &::before {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: #EBEBEB;
+            position: absolute;
+            top: 0;
+            right: 0;
+            content: "";
+        }
+    }
+
+    .slider-menu {
+        padding-top: 60px;
+
+        ul {
+            text-align: center;
+
+            li {
+                display: inline-block;
+                padding: 0 30px;
+                @include font(18px, 700);
+                color: #3C454A;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .blog-active {
+                &::before {
+                    width: 60px;
+                    height: 5px;
+                    border-radius: 5px;
+                    background-color: #687B86;
+                    position: absolute;
+                    bottom: -8px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    content: "";
+                }
+            }
+        }
+    }
+
+    .slider-main {
+        z-index: 99;
+        position: relative;
+
+        .slider-item {
+            margin: 0 20px;
+
+            .image {
+                transition: all linear .1s;
+                border: 6px solid #000;
+                border-radius: 8px;
+                border-radius: 8px;
+                height: 400px;
+                position: relative;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                .overlay {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all linear .2s;
+
+                    a {
+                        width: 100%;
+                        background-color: #121516;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        padding: 20px;
+                        @include font(16px, 500);
+                        color: $white;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+
+        .slider-item.slick-center {
+            .image {
+                transform: scale(1.1);
+            }
+
+            .overlay {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .slick-list {
+            padding: 60px 0 !important;
+        }
+
+        .arrow {
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            color: #000;
+            font-size: 22px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            transition: all linear .2s;
+
+            // &:hover {
+            //   background-color: #000;
+            //   color: $white;
+            // }
+        }
+
+        .arrow.left {
+            bottom: -84px;
+            right: 161px;
+            z-index: 9;
+            // background-color: #000;
+            // color: $white;
+        }
+
+        .arrow.right {
+            bottom: -84px;
+            right: 82px;
+        }
+    }
+}
+
+.ac {
+    background-color: $primary;
+    color: $white;
+}

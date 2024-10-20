@@ -1,0 +1,58 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.project-slider {
+  .slick-list {
+    padding: 100px 400px !important;
+  }
+
+  .slider-item {
+    height: 450px;
+    transition: all linear .2s;
+    margin: 0 84px !important;
+    border-radius: 8px;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 8px;
+    }
+  }
+
+  .slick-center.slider-item {
+    transform: scale(1.2) !important;
+  }
+
+  .arrow {
+    width: 76px;
+    height: 76px;
+    background-color: transparent;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 76px;
+    font-size: 18px;
+    color: $white;
+    cursor: pointer;
+    transition: all linear .2s;
+    position: absolute;
+
+    &:hover {
+      background-color: #276FFF;
+    }
+  }
+
+  .arrow.right {
+    top: -120px;
+    right: 383px;
+  }
+
+  .arrow.left {
+    top: -120px;
+    right: 469px;
+  }
+
+  .psl-active {
+    background-color: #276FFF !important;
+  }
+}

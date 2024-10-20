@@ -1,0 +1,249 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+
+.contact {
+  padding: 92px 0 33px 0;
+  background: linear-gradient(217deg, #141C27 50%, #000000);
+
+  .contact-info {
+    h3 {
+      color: $white;
+      @include font(64px, 400);
+      position: relative;
+      padding: 30px 0 18px 0;
+
+      span {
+        font-weight: 700;
+      }
+
+      &::after {
+        width: 150px;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $white;
+        content: "";
+      }
+    }
+
+    .info-body {
+      padding-top: 70px;
+
+      ul {
+        li {
+          position: relative;
+          padding: 0 40px 33px 49px;
+
+          i {
+            color: $white;
+            font-size: 26px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          color: $white;
+
+          h5 {
+            @include font(22px, 500);
+            color: $white;
+            padding-bottom: 5px;
+            text-transform: capitalize;
+          }
+
+          span {
+            @include font(18px, 400);
+            color: $white;
+          }
+        }
+
+        li:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .get-in-touch {
+    background-color: #1A242E;
+    padding: 40px;
+    padding-bottom: 20px;
+    position: relative;
+
+
+    h3 {
+      @include font(32px, 600);
+      color: $white;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 20px;
+
+      &::after {
+        width: 139px;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $white;
+        content: "";
+      }
+    }
+
+    p {
+      @include font(18px, 400);
+      color: $white;
+      padding-top: 20px;
+      text-transform: capitalize;
+    }
+
+    .touch-body {
+      padding-top: 25px;
+
+      .contact-body-shape {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 40px;
+      }
+
+      form {
+        width: 580px
+      }
+
+      label {
+        @include font(18px, 500);
+        color: $white;
+        text-transform: capitalize;
+      }
+
+      input {
+        height: 50px;
+        border-radius: 8px !important;
+        border: 0;
+        background-color: #131B26;
+        color: $white;
+        padding: 0 22px;
+      }
+
+      input::placeholder {
+        color: #9C9EA2;
+        @include font(16px, 400);
+        text-transform: capitalize;
+      }
+
+      textarea {
+        border-radius: 8px !important;
+        background-color: #131B26;
+        color: $white;
+        padding: 22px;
+        border: 1px solid transparent;
+        text-transform: capitalize;
+      }
+
+      button {
+        background-color: transparent;
+        border-radius: 4px;
+        background-color: #131B26;
+        border: 1px solid $white;
+        @include font(18px, 500);
+        padding: 8px 27px;
+        color: $white;
+        text-transform: uppercase;
+        transition: all linear .2s;
+
+        &:hover {
+          background-color: $primary;
+          border-color: $primary;
+        }
+      }
+
+      .loading {
+        img {
+          width: 34px;
+          height: 34px;
+          animation: animate 2s linear infinite;
+        }
+
+        @keyframes animate {
+          from {
+            transform: rotate(-360deg);
+          }
+
+          to {
+            transform: rotate(0deg);
+          }
+        }
+
+        span {
+          @include font(16px, 400);
+          line-height: 24px;
+          color: #42C998;
+          padding-left: 40px;
+        }
+      }
+
+    }
+
+    &::before {
+      width: 35px;
+      height: 35px;
+      background-color: $white;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      content: "";
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 50%);
+    }
+
+    &::after {
+      width: 35px;
+      height: 35px;
+      background-color: $white;
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      content: "";
+      clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+
+  .shape {
+    .cnt-shape-1 {
+      position: absolute;
+      top: 42px;
+      left: -120px;
+    }
+
+    .cnt-shape-2 {
+      position: absolute;
+      top: 400px;
+      left: -180px;
+    }
+
+    .cnt-shape-3 {
+      position: absolute;
+      bottom: -70px;
+      left: 174px;
+    }
+
+    .cnt-shape-4 {
+      position: absolute;
+      top: -132px;
+      right: -84px;
+    }
+
+    .cnt-shape-5 {
+      position: absolute;
+      top: 160px;
+      right: -124px;
+    }
+
+    .cnt-shape-6 {
+      position: absolute;
+      bottom: 190px;
+      right: -180px;
+    }
+  }
+}

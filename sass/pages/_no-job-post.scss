@@ -1,0 +1,55 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.no-job-post {
+  background-color: #131B26;
+  padding: 70px 0;
+
+  .no-job-info {
+    padding-top: 34px;
+
+    h5 {
+      @include font(32px, 500);
+      color: $white;
+    }
+
+    p {
+      @include font(20px, 400);
+      color: #276FFF;
+      margin-top: 25px
+    }
+
+    a {
+      @include font(22px, 500);
+      color: $white;
+      padding: 16px 90px;
+      border: 1px solid $white;
+      border-radius: 5px;
+      text-transform: capitalize;
+      margin-top: 60px;
+      transition: all linear .2s;
+
+      &:hover {
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+
+  .shape {
+    img {
+      position: absolute;
+    }
+
+    .job-shape-1 {
+      top: 138px;
+      left: -103px;
+    }
+
+    .job-shape-4 {
+      top: 260px;
+      right: -140px;
+    }
+
+  }
+}

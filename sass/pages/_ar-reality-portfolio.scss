@@ -1,0 +1,119 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.ar-reality-portfolio {
+    background: linear-gradient(217deg, #141C27 50%, #000000);
+    padding: 80px 0 160px 0;
+
+    .common-title {
+        padding-bottom: 60px;
+    }
+
+    .plyr {
+        height: 600px;
+    }
+
+    .plyr__poster {
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    .about-lab {
+        padding-top: 170px;
+        padding-bottom: 40px;
+
+        .text {
+            position: relative;
+            z-index: 99;
+
+            p {
+                @include font(24px, 400);
+                color: #9C9EA2;
+                line-height: 40px;
+                text-align: justify;
+            }
+        }
+
+        .image {
+            width: 516px;
+            height: 413px;
+            position: relative;
+            z-index: 9;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: url(../images/services-inner-shape.png);
+                width: 700px;
+                height: 700px;
+                content: "";
+                z-index: -999;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        .des {
+            padding-top: 14px;
+
+            p {
+                @include font(24px, 400);
+                color: #9C9EA2;
+                line-height: 40px;
+                text-align: justify;
+            }
+        }
+
+    }
+
+    .shape {
+        img {
+            position: absolute;
+        }
+
+        .shape-1 {
+            top: 92px;
+            left: -170px;
+        }
+
+        .shape-2 {
+            top: 392px;
+            left: -170px;
+        }
+
+        .shape-3 {
+            bottom: 0;
+            left: -170px;
+        }
+
+        .shape-4 {
+            top: 100px;
+            right: -170px;
+        }
+
+        .shape-5 {
+            top: 700px;
+            right: -170px;
+        }
+
+        .shape-6 {
+            bottom: 600px;
+            right: -190px;
+        }
+
+        .shape-7 {
+            bottom: 200px;
+            right: -210px;
+        }
+    }
+}

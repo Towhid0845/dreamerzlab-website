@@ -1,0 +1,55 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.client {
+  background-image: linear-gradient(90deg, #131B26, #000000);
+  padding: 188px 0 175px 0;
+
+  .client-title {
+    .common-title {
+      span {
+        font-size: 40px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .client-title {
+    position: relative;
+    left: -70px;
+  }
+
+  .clients-main {
+    padding-left: 62px;
+  }
+
+  .clients-item {
+    width: 16.66%;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    a {
+      padding: 30px;
+      width: 100%;
+      line-height: 157px;
+    }
+
+    img {
+      filter: grayscale(100%);
+      transition: all linear .2s;
+    }
+
+    &:hover {
+      img {
+        filter: grayscale(0%);
+      }
+    }
+  }
+
+  .clients-item.light {
+    background-color: #EBEBEB;
+  }
+}

@@ -1,0 +1,141 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.threed-modeling-portfolio {
+  background: linear-gradient(217deg, #141C27 50%, #000000);
+  padding: 80px 0 160px 0;
+
+  .common-title {
+    padding-bottom: 60px;
+  }
+
+  .featured-model {
+    .common-title {
+      padding-bottom: 102px;
+    }
+
+    .model-viewer {
+      width: 100%;
+      background-color: #D9D9D9;
+
+      .arrow {
+        color: $white;
+        font-size: 26px;
+        cursor: pointer;
+        position: absolute;
+        top: -72px;
+      }
+
+      .arrow.left {
+        right: 260px;
+        z-index: 9;
+      }
+
+      .arrow.right {
+        right: 0;
+      }
+
+      ul {
+        position: absolute;
+        top: -93px;
+        right: 51px;
+
+        &::before {
+          width: 100%;
+          height: 1px;
+          background-color: #878788;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: "";
+        }
+
+
+        li {
+          display: inline-block;
+          position: relative;
+
+          button {
+            background-color: transparent;
+            border: 0;
+            font-size: 24px;
+            color: #878788;
+            width: 60px;
+            text-align: center;
+          }
+        }
+
+        li.slick-active {
+          &::before {
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $white;
+            border-radius: 5px;
+            content: "";
+          }
+
+          button {
+            @include font(36px, 500);
+            display: block !important;
+            color: $white;
+            position: relative;
+            top: -5px;
+          }
+        }
+      }
+    }
+  }
+
+  .about-lab {
+    padding-top: 100px;
+
+    .title {
+      padding-bottom: 40px;
+
+      h3 {
+        @include font(28px, 700);
+        line-height: 40px;
+        color: $white;
+        text-transform: uppercase;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          top: -8px;
+          left: 0;
+          width: 33px;
+          height: 5px;
+          border-radius: 5px;
+          background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+          content: "";
+        }
+      }
+    }
+
+    p {
+      @include font(24px, 400);
+      color: #9C9EA2;
+      line-height: 40px;
+      text-align: justify;
+    }
+  }
+
+  .project-images {
+    padding-top: 150px;
+  }
+
+  .shape {
+    img {
+      position: absolute;
+    }
+
+    .shape-1 {
+      bottom: 120px;
+      right: -100px;
+    }
+  }
+
+}

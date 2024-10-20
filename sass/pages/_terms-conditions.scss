@@ -1,0 +1,82 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.terms-condition {
+  padding: 217px 0 67px 0;
+  background-color: #131B26;
+
+  .terms-header {
+    p {
+      @include font(24px, 400);
+      color: $white;
+      line-height: 45px;
+      text-align: justify;
+    }
+
+    .title {
+      margin-top: -14px;
+      margin-left: 30px;
+      position: relative;
+
+      &::before {
+        width: 240px;
+        height: 240px;
+        background: url(../images/and.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        content: "";
+      }
+
+      &::after {
+        width: 800px;
+        height: 800px;
+        background: url(../../images/services-inner-shape.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 60px;
+        right: -260px;
+        content: "";
+      }
+
+      h1 {
+        @include font(133px, 700);
+        color: $white;
+        text-transform: uppercase;
+        line-height: 140px;
+        span{
+          font-size: 99px
+        }
+      }
+    }
+  }
+
+  .details {
+    p {
+      @include font(24px, 400);
+      color: $white;
+      line-height: 45px;
+      margin-top: 45px;
+      position: relative;
+      z-index: 99;
+    }
+
+    .button {
+      padding-top: 85px;
+
+      a {
+        @include font(18px, 500);
+        color: $white;
+        text-transform: uppercase;
+        padding: 9px 41px;
+        border-radius: 5px;
+        border: 1px solid $white;
+      }
+    }
+  }
+}

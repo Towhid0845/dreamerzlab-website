@@ -1,0 +1,227 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.hero-part {
+  padding: 300px 0 300px 0;
+  position: relative;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+
+  .hero-info {
+    .prd-logo{
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      object-position: center
+    }
+    h1 {
+      @include font(72px, 700);
+      color: $white;
+      text-transform: uppercase;
+      padding-top: 30px;
+      padding-bottom: 40px;
+    }
+
+    p {
+      @include font(24px, 600);
+      color: #EF5DA8;
+      text-transform: capitalize;
+      min-height: 45px;
+    }
+  }
+
+  .shape {
+    img {
+      position: absolute;
+    }
+
+    .bread-shape-1 {
+      top: -29px;
+      left: 236px;
+      animation: shape1 3s infinite linear alternate;
+    }
+
+    .bread-shape-2 {
+      top: 100px;
+      left: -100px;
+      animation: shape2 3s infinite linear alternate;
+    }
+
+    .bread-shape-3 {
+      top: 360px;
+      left: 136px;
+      animation: shape3 4s infinite linear;
+    }
+
+    .bread-shape-4 {
+      bottom: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: shape3 4s infinite linear;
+    }
+
+    .bread-shape-5 {
+      bottom: -100px;
+      right: 105px;
+      animation: shape5 6s infinite linear alternate;
+    }
+
+    .bread-shape-6 {
+      top: -50px;
+      right: 170px;
+      animation: shape6 3s infinite linear alternate;
+    }
+
+    .bread-shape-7 {
+      right: 0;
+      bottom: 244px;
+    }
+
+    .game-shape-1 {
+      top: -29px;
+      left: 236px;
+      animation: shape1 3s infinite linear alternate;
+    }
+
+    .game-shape-2 {
+      top: 160px;
+      left: 0;
+      animation: shape2 3s infinite linear alternate;
+    }
+
+    .game-shape-3 {
+      top: 460px;
+      left: 136px;
+      animation: gameshape3 4s infinite linear;
+    }
+
+    .game-shape-4 {
+      bottom: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: gameshape4 4s infinite linear alternate;
+    }
+
+    .game-shape-5 {
+      bottom: -250px;
+      right: 105px;
+      animation: shape3 6s infinite linear;
+    }
+
+    .game-shape-6 {
+      top: 180px;
+      right: 0px;
+      animation: gameshape6 3s infinite linear alternate;
+    }
+
+    .game-shape-7 {
+      top: -80px;
+      right: 200px;
+      animation: gameshape7 3s infinite linear alternate;
+    }
+  }
+  .red{
+    color: #FF4747 !important;
+  }
+}
+
+@keyframes shape1 {
+  from {
+    top: 40px;
+  }
+
+  to {
+    top: -29px;
+  }
+}
+
+@keyframes shape2 {
+  from {
+    left: -100px;
+  }
+
+  to {
+    left: -50px;
+  }
+}
+
+@keyframes shape3 {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+@keyframes shape5 {
+  0% {
+    bottom: -100px;
+  }
+
+  25% {
+    right: 160px;
+  }
+
+  50% {
+    bottom: 0px;
+  }
+
+  100% {
+    right: 105px;
+  }
+}
+
+@keyframes shape6 {
+  from {
+    top: 100;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+
+@keyframes gameshape3 {
+  from {
+    transform: rotateY(360deg);
+  }
+
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes gameshape4 {
+  from {
+    bottom: -280px;
+  }
+
+  to {
+    bottom: -200px;
+  }
+}
+
+@keyframes gameshape6 {
+  from {
+    top: 180px;
+  }
+
+  to {
+    top: 120px;
+  }
+}
+
+@keyframes gameshape7 {
+  from {
+    top: -80px;
+  }
+
+  to {
+    top: 0;
+  }
+}

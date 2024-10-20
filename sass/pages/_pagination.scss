@@ -1,0 +1,61 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.paginations {
+  padding-top: 60px;
+
+  ul {
+    li {
+      display: inline-block;
+      padding: 0 14px;
+      margin: 0 -3px;
+      padding-bottom: 3px;
+    }
+
+    li.pagi-left {
+      padding-right: 20px;
+    }
+
+    li.pagi-right {
+      padding-left: 20px;
+    }
+
+    li.pagi-arrow {
+      a {
+        font-size: 32px;
+        color: $white;
+      }
+    }
+
+    li.pagi-item {
+      @include font(24px, 400);
+      border-bottom: 1px solid #878788;
+
+      a {
+        color: #878788;
+      }
+    }
+
+    li.active {
+      position: relative;
+      top: -4px;
+
+      a {
+        @include font(36px, 500);
+        color: $white;
+        position: relative;
+        &::before{
+          width: 70px;
+          height: 3px;
+          border-radius: 5px;
+          background-color: $white;
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          transform: translateX(-50%);
+          content: "";
+        }
+      }
+    }
+  }
+}

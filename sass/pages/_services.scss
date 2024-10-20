@@ -1,0 +1,141 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.our-services {
+  background-color: #131B26;
+  padding: 100px 0 206px 0;
+
+  .services-item {
+    margin-bottom: 80px;
+
+    .icon {
+      margin-bottom: 30px;
+      width: 90px;
+      height: 90px;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .common-title {
+      margin-bottom: 20px;
+    }
+
+    .text {
+      position: relative;
+      z-index: 99;
+
+      p {
+        @include font(24px, 400);
+        color: #9C9EA2;
+        line-height: 45px;
+        text-align: justify;
+      }
+
+      .button {
+        margin-top: 40px;
+
+        a {
+          @include font(18px, 500);
+          color: $white;
+          padding: 9px 42px;
+          text-transform: uppercase;
+          border-radius: 5px;
+          border: 1px solid $white;
+          transition: all linear .2s;
+
+          &:hover {
+            background-color: $primary;
+            color: $white;
+            border-color: $primary;
+          }
+        }
+      }
+    }
+
+    .image {
+      position: relative;
+      z-index: 9;
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      margin-top: -100px;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url(../images/services-inner-shape.png);
+        width: 1059px;
+        height: 1059px;
+        content: "";
+        z-index: -1;
+      }
+    }
+  }
+
+  .services-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .shape {
+    img {
+      position: absolute;
+    }
+
+    .service-shape-1 {
+      top: 145px;
+      left: -200px;
+    }
+
+    .service-shape-2 {
+      top: 445px;
+      left: -220px;
+    }
+
+    .service-shape-3 {
+      bottom: 1045px;
+      left: -240px;
+    }
+
+    .service-shape-4 {
+      bottom: 545px;
+      left: -200px;
+    }
+
+    .service-shape-5 {
+      top: 300px;
+      right: -180px;
+    }
+
+    .service-shape-6 {
+      top: 850px;
+      right: -180px;
+    }
+
+    .service-shape-7 {
+      top: 1380px;
+      right: -220px;
+    }
+
+    .service-shape-8 {
+      bottom: 540px;
+      right: -260px;
+    }
+
+    .service-shape-9 {
+      bottom: 0;
+      right: -100px;
+    }
+  }
+}

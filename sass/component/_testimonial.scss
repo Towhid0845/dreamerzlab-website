@@ -1,0 +1,151 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+
+.testimonial {
+    background-image: linear-gradient(90deg, #131B26, #000000);
+    padding: 173px 0 160px 0;
+
+    .testi-title {
+        position: absolute;
+        transform: rotate(-90deg);
+        top: 111px;
+        left: -107px;
+
+        h3 {
+            @include font(48px, 600);
+            color: $white;
+
+        }
+    }
+
+    .testi-body {
+        .image {
+            position: relative;
+            height: 601px;
+            border-radius: 8px;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 8px;
+            }
+
+            &::after {
+                width: 100%;
+                height: 200px;
+                background-color: rgba(60, 69, 74, 0.5);
+                position: absolute;
+                bottom: 86px;
+                left: 0;
+                content: "";
+            }
+        }
+
+        .text {
+            .testi-heading {
+                margin-top: 36px;
+                padding-left: 61px;
+
+                h2 {
+                    @include font(40px, 700);
+                    color: $white;
+                    text-transform: uppercase;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                span {
+                    @include font(24px, 400);
+                    color: $white;
+                    text-transform: uppercase;
+                    padding-top: 8px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: block;
+                }
+            }
+
+            .testi-details {
+                background-color: #1E1E1E;
+                padding: 130px 53px 65px 54px;
+                border-radius: 10px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+                margin-top: 32px;
+                min-height: 356px;
+
+                p {
+                    @include font(24px, 400);
+                    color: $white;
+                    line-height: 40px;
+                }
+            }
+        }
+
+
+        .arrow {
+            color: $white;
+            font-size: 70px;
+            cursor: pointer;
+            position: absolute;
+            width: 163px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            background-color: rgba(60, 69, 74, 0.5);
+        }
+
+        .arrow.left {
+            bottom: 1px;
+            left: -564px;
+            z-index: 9;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .arrow.right {
+            bottom: 0px;
+            right: -170px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            width: 169px;
+        }
+
+        ul {
+            position: absolute;
+            bottom: -70px;
+            left: -213px;
+
+            li {
+                display: inline-block;
+
+                button {
+                    background-color: transparent;
+                    border: 0;
+                    font-size: 18px;
+                    color: $white;
+                    display: none;
+                }
+            }
+
+            li.slick-active {
+                button {
+                    @include font(64px, 500);
+                    display: block !important;
+                }
+            }
+        }
+    }
+
+    .total-count {
+        position: absolute;
+        bottom: -52px;
+        left: 60px;
+        color: $white;
+        @include font(24px, 400);
+    }
+}

@@ -1,0 +1,101 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.solutions {
+  padding-top: 40px;
+  position: relative;
+
+  .common-title {
+    padding-bottom: 60px;
+    padding-left: 313px;
+  }
+
+  .solutions-slider {
+    padding-left: 313px;
+    margin-right: -288px;
+
+    .slider-item {
+      margin: 0 12px;
+      height: 400px;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .overlay {
+        background-color: rgba(255, 255, 255, 0.18);
+        width: 263px;
+        min-height: 120px;
+        padding: 48px 20px 48px 20px;
+        backdrop-filter: blur(10px);
+
+        h3 {
+          @include font(20px, 600);
+          color: $white;
+          text-transform: uppercase;
+        }
+
+        i {
+          position: absolute;
+          bottom: 0;
+          right: 20px;
+          font-size: 32px;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .arrow {
+    width: 76px;
+    height: 76px;
+    background-color: transparent;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 76px;
+    font-size: 18px;
+    color: $white;
+    cursor: pointer;
+    transition: all linear .2s;
+    position: absolute;
+
+    &:hover {
+      background-color: #276FFF;
+    }
+  }
+
+  .arrow.right {
+    top: -120px;
+    right: 590px;
+  }
+
+  .arrow.left {
+    top: -120px;
+    right: 676px;
+  }
+
+  .button {
+    padding-top: 57px;
+
+    a {
+      @include font(18px, 500);
+      color: $white;
+      text-transform: uppercase;
+      padding: 9px 42px;
+      border-radius: 5px;
+      border: 1px solid $white;
+      transition: all linear .2s;
+
+      &:hover {
+        background-color: #276FFF;
+        border-color: #276FFF;
+      }
+    }
+  }
+}
+
+.sl-active{
+  background-color: #276FFF !important;
+}

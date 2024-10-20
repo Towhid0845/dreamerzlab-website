@@ -1,0 +1,575 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+.career-details {
+    background-color: #131B26;
+
+    .nav-link {
+        background-color: transparent !important;
+        color: #A1A4A8;
+        @include font(42px, 400);
+        text-transform: uppercase;
+        position: relative;
+        padding: 0;
+        margin: 0 100px;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 33px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: #687B86;
+            content: "";
+        }
+    }
+
+    .nav-pills .nav-link.active {
+        color: $white !important;
+        font-weight: 700 !important;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            border-radius: 5px;
+            background-color: $white;
+            content: "";
+        }
+    }
+
+    .overview {
+        padding-top: 30px;
+
+        .job-details {
+            width: 100%;
+            padding: 122px 40px 40px;
+            background-color: #161F2A;
+
+            .title {
+                padding-bottom: 40px;
+
+                h4 {
+                    @include font(32px, 600);
+                    color: $white;
+                    text-transform: capitalize;
+                }
+            }
+
+            .details-item {
+                ul {
+                    li {
+                        margin-bottom: 56px;
+
+                        p {
+                            @include font(24px, 400);
+                            color: #276FFF;
+                        }
+
+                        span {
+                            @include font(18px, 400);
+                            color: $white;
+                            text-transform: capitalize;
+                            padding-top: 10px;
+                        }
+                    }
+
+                    li:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .job-des {
+            margin-top: 60px;
+            padding: 40px 40px 0;
+
+            .title {
+                padding-bottom: 40px;
+
+                h4 {
+                    @include font(32px, 600);
+                    color: #276FFF;
+                    text-transform: capitalize;
+                }
+            }
+
+            span {
+                @include font(24px, 400);
+                color: #276FFF;
+                padding-bottom: 33px;
+            }
+
+            p {
+                font-size: 24px;
+                font-weight: 400;
+                color: $white;
+                line-height: 40px;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                padding-left: 30px;
+
+                li {
+                    @include font(24px, 400);
+                    color: $white;
+                    line-height: 40px;
+                    margin-bottom: 20px;
+                    list-style-type: disc;
+                }
+            }
+        }
+
+        .interview {
+            margin-top: 30px;
+            padding: 40px 40px 0;
+
+            .title {
+                padding-bottom: 40px;
+
+                h4 {
+                    @include font(32px, 600);
+                    color: #276FFF;
+                    text-transform: capitalize;
+                }
+            }
+
+            ul {
+                padding-left: 30px;
+
+                li {
+                    @include font(24px, 400);
+                    color: $white;
+                    line-height: 40px;
+                    margin-bottom: 20px;
+                    list-style-type: disc;
+                }
+            }
+        }
+
+        .last-date {
+            margin-top: 80px;
+            width: 100%;
+            padding: 40px 80px 150px;
+            background-color: #161F2A;
+
+            .title {
+                padding-bottom: 40px;
+
+                h4 {
+                    @include font(32px, 600);
+                    color: #276FFF;
+                    text-transform: capitalize;
+                }
+            }
+
+            p {
+                @include font(24px, 400);
+                color: $white;
+            }
+
+            .button {
+
+                a,
+                button {
+                    @include font(22px, 500);
+                    color: $white;
+                    text-transform: uppercase;
+                    color: $white;
+                    padding: 16px 0;
+                    width: 722px;
+                    border: 1px solid $white;
+                    border-radius: 5px;
+                    margin-top: 120px;
+                    transition: all linear .2s;
+                    cursor: pointer;
+                    background: transparent;
+
+                    &:hover {
+                        background-color: $primary;
+                        border-color: $primary;
+                    }
+                }
+            }
+        }
+
+        .shape {
+            img {
+                position: absolute;
+            }
+
+            .career-shape-1 {
+                top: 31px;
+                left: -168px;
+            }
+
+            .career-shape-2 {
+                top: 260px;
+                left: -178px;
+            }
+
+            .career-shape-3 {
+                top: 100px;
+                right: -148px;
+            }
+
+            .career-shape-4 {
+                top: 550px;
+                right: -148px;
+            }
+
+            .career-shape-5 {
+                top: 1050px;
+                right: -218px;
+            }
+
+            .career-shape-6 {
+                bottom: 560px;
+                left: -250px
+            }
+        }
+    }
+
+    .application-form {
+        padding-top: 30px;
+
+        .form-title {
+            padding-bottom: 50px;
+
+            .title {
+                h4 {
+                    @include font(32px, 600);
+                    color: #276FFF;
+                }
+            }
+
+            .clear {
+                button {
+                    @include font(24px, 400);
+                    color: #9C9EA2;
+                    background-color: transparent;
+                    border: 0;
+                    transition: all linear .2s;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        .personal-info {
+            padding: 40px 155px;
+            background-color: #161F2A;
+
+            .form-label {
+                @include font(24px, 500);
+                color: $white;
+                padding-bottom: 5px;
+
+                span {
+                    @include font(20px, 400);
+                    color: #9C9EA2;
+                }
+            }
+
+            input {
+                height: 79px;
+                background-color: #1A242E;
+                border: 1px solid transparent;
+                border-radius: 8px;
+                padding: 0 24px;
+                @include font(18px, 400);
+                color: $white;
+                text-transform: capitalize;
+
+                &::placeholder {
+                    @include font(18px, 400);
+                    color: #9C9EA2;
+                    text-transform: capitalize;
+                }
+            }
+
+            .iti__flag-container {
+                width: 128px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                z-index: 99;
+                background-color: #1A242E;
+                border-radius: 8px;
+            }
+
+            .iti--separate-dial-code .iti__selected-dial-code {
+                color: #FFF;
+            }
+
+            .iti__selected-flag {
+                justify-content: center;
+            }
+
+            .iti__arrow {
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-top: 7px solid #fff;
+                margin-left: 10px;
+            }
+
+            .iti__arrow--up {
+                border-top: none !important;
+                border-bottom: 7px solid #fff;
+            }
+
+            // .iti__arrow {
+            //     border-left: 2px solid #fff;
+            //     border-bottom: 2px solid #fff;
+            //     margin-left: 10px;
+            //     border-top: transparent;
+            //     border-right: 0;
+            //     width: 10px;
+            //     height: 10px;
+            //     transform: rotate(-45deg);
+            //     transition: all linear .2s;
+            // }
+
+            // .iti__arrow--up {
+            //     transform: rotate(-225deg);
+            // }
+
+            .iti {
+                width: 100%;
+            }
+
+            .number-code {
+                padding-left: 160px !important;
+            }
+        }
+
+        .attachment {
+            margin-top: 40px;
+            padding: 40px 155px;
+
+            .file-upload {
+                .input-groups {
+                    .box {
+                        width: 100%;
+                        height: 260px;
+                        border: 2px dashed #3C454A;
+                        border-radius: 10px;
+                        background-color: #1A242E;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .form-label {
+                @include font(24px, 500);
+                color: $white;
+                padding-bottom: 5px;
+
+                span {
+                    @include font(20px, 400);
+                    color: #9C9EA2;
+                }
+            }
+
+            .files {
+                p {
+                    @include font(20px, 700);
+                    color: #9C9EA2;
+                    cursor: pointer;
+
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .details {
+            padding: 40px 155px;
+            background-color: #161F2A;
+            margin-top: 40px;
+
+            .question-main {
+                .qus-title {
+                    h4 {
+                        @include font(20px, 500);
+                        color: $white;
+                    }
+
+                    padding-bottom: 16px;
+                }
+
+                .questions {
+                    background-color: #1A242E;
+                    border-radius: 10px;
+                    display: inline-block;
+                    margin-bottom: 40px;
+
+                    label {
+                        position: relative;
+                        cursor: pointer;
+
+
+                        input {
+                            display: none;
+                        }
+
+                        span {
+                            @include font(18px, 500);
+                            color: $white;
+                            background-color: #1A242E;
+                            padding: 28px 69px;
+                            border-radius: 10px;
+                        }
+
+                        input:checked {
+                            ~span {
+                                color: #276FFF;
+                            }
+                        }
+                    }
+                }
+
+                .expected-sellery {
+                    .form-label {
+                        @include font(24px, 500);
+                        color: $white;
+                        padding-bottom: 5px;
+
+                        span {
+                            @include font(20px, 400);
+                            color: #9C9EA2;
+                        }
+                    }
+
+                    input {
+                        height: 79px;
+                        background-color: #1A242E;
+                        border: 1px solid transparent;
+                        border-radius: 8px;
+                        padding: 0 24px;
+                        @include font(18px, 400);
+                        color: $white;
+                        text-transform: capitalize;
+
+                        &::placeholder {
+                            @include font(18px, 400);
+                            color: #9C9EA2;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+
+                .form-check {
+                    .form-check-input {
+                        width: 22px;
+                        height: 24px;
+                        background-color: transparent;
+                        border: 1px solid #9C9EA2;
+                        border-radius: 5px;
+                    }
+
+                    .form-check-label {
+                        @include font(20px, 400);
+                        color: #9C9EA2;
+                        padding-left: 14px;
+                    }
+                }
+
+                .button {
+
+                    a,
+                    button {
+                        @include font(22px, 500);
+                        color: $white;
+                        text-transform: uppercase;
+                        color: $white;
+                        padding: 16px 0;
+                        width: 722px;
+                        border: 1px solid $white;
+                        border-radius: 5px;
+                        margin-top: 120px;
+                        cursor: pointer;
+                        transition: all linear .2s;
+                        background: transparent;
+
+                        &:hover {
+                            background-color: $primary;
+                            border-color: $primary;
+                        }
+                    }
+                }
+
+                .loading {
+                    padding-top: 40px;
+
+                    img {
+                        width: 34px;
+                        height: 34px;
+                        animation: animate 2s linear infinite;
+                    }
+
+                    @keyframes animate {
+                        from {
+                            transform: rotate(-360deg);
+                        }
+
+                        to {
+                            transform: rotate(0deg);
+
+                        }
+                    }
+
+                    span {
+                        @include font(16px, 400);
+                        line-height: 24px;
+                        color: #42C998;
+                        padding-left: 40px;
+                    }
+                }
+            }
+        }
+
+        .shape {
+            img {
+                position: absolute;
+            }
+
+            .shape-1 {
+                top: 33px;
+                left: -130px;
+            }
+
+            .shape-2 {
+                top: 353px;
+                left: -150px;
+            }
+
+            .shape-3 {
+                top: 653px;
+                left: -190px;
+            }
+
+            .shape-4 {
+                top: 113px;
+                right: -140px;
+            }
+
+            .shape-5 {
+                top: 413px;
+                right: -200px;
+            }
+        }
+    }
+
+    .name {
+        bottom: 880px;
+    }
+}

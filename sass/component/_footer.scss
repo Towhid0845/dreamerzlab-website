@@ -1,0 +1,179 @@
+@import "../variable/color";
+@import "../mixin/font";
+
+
+footer {
+    background: linear-gradient(217deg, #141C27 50%, #000000);
+    padding: 120px 0 47px 0;
+
+    .footer-title {
+        padding-bottom: 20px;
+
+        h4 {
+            @include font(18px, 500);
+            color: $white;
+            text-transform: capitalize;
+        }
+    }
+
+    .address {
+        ul {
+            li {
+                position: relative;
+                padding-left: 34px;
+                color: #9C9EA2;
+                @include font(14px, 500);
+                padding-bottom: 24px;
+
+                i {
+                    font-size: 16px;
+                    color: $white;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                span {
+                    padding-right: 80px;
+                }
+            }
+
+            li:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .links {
+        ul {
+            li {
+                padding-bottom: 20px;
+
+                a {
+                    @include font(14px, 400);
+                    color: #9C9EA2;
+                    transition: all linear .2s;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    max-width: 100px;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+
+            li:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .store-logo {
+        a {
+            margin-bottom: 10px;
+        }
+    }
+
+    .footer-menu {
+        padding-top: 80px;
+
+        ul {
+            li {
+                display: inline-block
+            }
+        }
+
+        a {
+            @include font(18px, 500);
+            color: $white;
+            margin-right: 48px;
+            position: relative;
+            transition: all linear .2s;
+
+            &:hover {
+                color: $primary;
+            }
+
+            &::after {
+                position: absolute;
+                top: 0;
+                right: -28px;
+                background-color: #C4C4C4;
+                width: 1px;
+                height: 28px;
+                content: "";
+            }
+        }
+
+        li:last-child a {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .footer-btm {
+
+        .copyright {
+            p {
+                @include font(14px, 400);
+                color: #DBD8D6;
+            }
+        }
+
+        .social {
+            a {
+                font-size: 24px;
+                color: $white;
+                margin: 0 35px;
+                transition: all linear .2s;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+
+        .subscribe {
+            .sub-body {
+                width: 312px;
+
+                span {
+                    @include font(18px, 400);
+                    color: $white;
+                    padding-bottom: 16px;
+                }
+
+                input {
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 10px;
+                    padding: 0 22px;
+                    background-color: $white;
+                    border: 0;
+                    @include font(14px, 400);
+                }
+
+                button {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 71px;
+                    height: 50px;
+                    border-radius: 10px;
+                    background: linear-gradient(217deg, #276FFF 50%, #5474DA);
+                    border: 0;
+                    font-size: 16px;
+                    color: $white;
+                }
+
+                .email-label {
+                    bottom: -30px;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}
